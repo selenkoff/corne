@@ -18,8 +18,8 @@
         compatible = "zmk,combos";
         combo_steno {
             timeout-ms = <100>;
-            key-positions = <0 5 6 11>;
-            bindings = <&tog 3;
+            key-positions = <0 11>;
+            bindings = <&tog 3>;
         };
     };
     
@@ -69,10 +69,10 @@
                 
                steno_layer {
                         bindings = <
-   &kp N1       &kp N2  &kp N3  &kp N4  &kp N5   &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
-   &kp TAB      &kp Q   &kp W   &kp E   &kp R    &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P      &kp LBKT   
-   &kp CAPSLOCK &kp A   &kp S   &kp D   &kp F    &kp G       &kp H   &kp J   &kp K   &kp L   &kp SEMI   &kp APOS 
-                                &kp C   &kp V    &kp B       &kp B   &kp N   &kp M   
+   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6      &kp N7  &kp N8  &kp N9  &kp N0     &kp MINUS  &kp EQUAL
+   &kp Q   &kp W   &kp E   &kp R   &kp T    &kp Y       &kp U   &kp I   &kp O   &kp P      &kp LBKT   &kp RBKT 
+   &kp A   &kp S   &kp D   &kp F   &kp G    &kp H       &kp J   &kp K   &kp L   &kp SEMI   &kp APOS   &kp ENTER
+                           &kp C   &kp V    &kp B       &kp N   &kp M   &kp COMMA 
                            >;
                 };
         };
