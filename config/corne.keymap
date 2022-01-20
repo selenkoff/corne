@@ -8,7 +8,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/ {
+#define default_layer 0
+#define lower_layer 1
+#define raise_layer 2
+#define steno_layer 3
+
+/{
+    combos {
+        compatible = "zmk,combos";
+        combo_steno {
+            timeout-ms = <100>;
+            key-positions = <0 5 6 11>;
+            bindings = <&tog 3;
+        };
+    };
+    
         keymap {
                 compatible = "zmk,keymap";
 
@@ -51,6 +65,15 @@
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
+                };
+                
+               steno_layer {
+                        bindings = <
+   &kp N1       &kp N2  &kp N3  &kp N4  &kp N5   &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
+   &kp TAB      &kp Q   &kp W   &kp E   &kp R    &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P      &kp LBKT   
+   &kp CAPSLOCK &kp A   &kp S   &kp D   &kp F    &kp G       &kp H   &kp J   &kp K   &kp L   &kp SEMI   &kp APOS 
+                                &kp C   &kp V    &kp B       &kp B   &kp N   &kp M   
+                           >;
                 };
         };
 };
